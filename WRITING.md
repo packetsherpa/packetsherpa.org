@@ -134,6 +134,15 @@ cover:                 # optional; only for bundles that include an image
 Keep to these fields — standard front matter is what keeps the site portable
 and makes a future theme swap a one-line change.
 
+### Starting a post in iA Writer or MiniSeries
+
+`templates/iawriter-post.md` is a ready-to-fill starter: the front matter above
+plus a scaffolded body, with no `hugo new` step. Both iA Writer (iOS) and
+MiniSeries (macOS) edit plain Markdown, so keep a copy of it in your synced
+writing folder (iCloud or Dropbox) and duplicate it for each new post. Rename
+the copy to the URL you want, fill in the front matter, and write. When you are
+ready, move it into `content/technology/` and push (see below).
+
 ## Gotchas
 
 - **`cover ... relative: true`** is required for a bundle's header image, or the
