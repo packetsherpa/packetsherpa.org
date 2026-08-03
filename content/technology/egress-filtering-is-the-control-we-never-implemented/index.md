@@ -1,7 +1,7 @@
 ---
 title: "Egress Filtering Is the Control We Never Implemented"
 date: 2026-08-01T12:24:15-04:00
-draft: false
+draft: true
 description: "We've known how to authenticate and authorize outbound access since the 2000s. Autonomous agents are what turn a hardening project we kept deferring into a containment requirement."
 categories:
   - Technology
