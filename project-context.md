@@ -26,20 +26,27 @@ technical leadership — with a low-friction "write markdown locally, push to
 - Image optimization added: `cover.responsiveImages = true` plus a new in-body
   image render hook at `layouts/_markup/render-image.html`.
 
+- Live at `https://packetsherpa.org/` with HTTPS enforced.
+- Also live at `https://damiendeville.com/` from an auto-synced mirror repo
+  (2026-08-03). Some DNS filtering services block `packetsherpa.org` for being a
+  newly registered domain, so the established domain now serves the same site
+  and is the canonical origin. See [[damiendeville-mirror]] and
+  [[canonical-domain-override]].
+
 ## Blockers
 
-- **Not live yet.** Going live needs two manual steps outside this repo:
-  1. DNS at Hover for `packetsherpa.org` — four apex `A` records to
-     `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`,
-     plus `CNAME www → packetsherpa.github.io`.
-  2. GitHub repo Settings → Pages → set the custom domain to `packetsherpa.org`
-     and enable Enforce HTTPS once the certificate is issued.
 - `steady.org` still contains the technology section. It has not been cut down
   yet — that is a separate change in that repo.
 
 ## Next
 
-- Land the DNS and Pages settings above, then confirm the live site.
+- **Around mid-September 2026** (4–6 weeks after 2026-08-03), check whether the
+  resolvers that were blocking `packetsherpa.org` have stopped. If so, set
+  `canonicalBaseURL = "https://packetsherpa.org/"` in `hugo.toml` — that single
+  line flips canonical back for both sites. `damiendeville.com` keeps serving.
+- `https://www.damiendeville.com/` fails TLS: the Pages certificate covers the
+  apex only. GitHub usually adds `www` on a later revalidation; recheck, and if
+  it has not resolved, re-set the custom domain in Settings → Pages.
 - Cut `steady.org` down to music: delete `content/technology/`,
   `archetypes/technology.md`, `ideas/technology/`, fix its `hugo.toml`, and
   rewrite its about/home copy. No redirects — readership is negligible and
