@@ -17,10 +17,12 @@ technical leadership — with a low-friction "write markdown locally, push to
   history so the three existing technology notes keep their commits. `steady.org`
   keeps music and personal writing; this repo takes technology. See
   [[split-from-steady-org]].
-- Carried over: three technology notes (`it-wasnt-air-gapped`,
-  `shadow-ai-is-a-demand-signal-not-a-policy-failure`,
-  `egress-filtering-is-the-control-we-never-implemented`), the about page, the
-  PaperMod submodule, the Pages workflow, and the `ideas/` staging tree.
+- Carried over: three technology notes, the about page, the PaperMod submodule,
+  the Pages workflow, and the `ideas/` staging tree. Two of those notes are
+  live (`it-wasnt-air-gapped`,
+  `shadow-ai-is-a-demand-signal-not-a-policy-failure`); the third,
+  `egress-filtering-is-the-control-we-never-implemented`, was superseded by
+  `anthropic-missed-the-security-lesson` and deleted on 2026-08-07.
 - Posts publish at the site root (`/:contentbasename/`, i.e. the bundle folder name) rather than `/technology/:slug/`;
   `/technology/` is now the Archive listing.
 - Image optimization added: `cover.responsiveImages = true` plus a new in-body
@@ -52,4 +54,12 @@ technical leadership — with a low-friction "write markdown locally, push to
   rewrite its about/home copy. No redirects — readership is negligible and
   Damien explicitly deferred them on 2026-08-02.
 - Optional: add the same image render hook to `steady.org`.
+- Next post: the accountability/failed-assumptions piece staged at
+  `ideas/inbox/Notes Accountability, Assumptions, and AI Incident Reports.txt`.
+  Decided 2026-08-07: drop the architecture argument (already covered by
+  `it-wasnt-air-gapped` and `anthropic-missed-the-security-lesson`) and build
+  the post on the behavioral → organizational → architectural accountability
+  hierarchy, comparing how the OpenAI, Anthropic, and AISI reports handle
+  failed assumptions. AISI report verified: published 2026-08-04, and it does
+  state its own incorrect assumptions and the controls it is changing.
 - Write posts.
